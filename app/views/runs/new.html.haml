@@ -1,0 +1,16 @@
+%h1 Log A New Run
+
+-if !run.errors.nil?
+  %ul
+  -run.errors.full_messages.each do |error|
+    %li= error
+
+= form_for run do |f|
+  =f.label :ran_on
+  %br
+  =f.date_select :ran_on
+  %br
+  =f.label :distance
+  =f.number_field :distance
+  %br
+  =f.submit
