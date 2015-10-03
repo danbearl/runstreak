@@ -1,19 +1,20 @@
-%h1 Run Streak
--unless current_user
-  =link_to "Sign up", new_user_path
-  =link_to "Sign in", new_session_path
--else
-  =link_to "Add a new run", new_user_run_path(current_user.id)
-  %h2 Current Streak
-  %p
-    Days:
-    =current_user.current_streak_days
-  %p
-    Distance:
-    =current_user.current_streak_distance
-  %p
-    Average Miles Per Day:
-    =current_user.current_streak_average
-  %p
-    Longest Streak:
-    =current_user.longest_streak
+.col-md-3.col-xs-3
+  %h1 Run Streak
+  -unless current_user
+    =link_to "Sign up", new_user_path
+    =link_to "Sign in", new_session_path
+  -else
+    =link_to "Add a new run", new_user_run_path(current_user.id)
+    %h2 Current Streak
+    %p
+      Days:
+      =current_user.current_streak_days
+    %p
+      Distance:
+      =current_user.current_streak_distance
+    %p
+      Average Miles Per Day:
+      =current_user.current_streak_average
+    %p
+      Longest Streak:
+      =current_user.longest_streak

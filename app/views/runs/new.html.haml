@@ -1,16 +1,18 @@
-%h1 Log A New Run
+.col-md-3.col-xs-3
+  %h1 Log A New Run
 
--if !run.errors.nil?
-  %ul
-  -run.errors.full_messages.each do |error|
-    %li= error
+  -if !run.errors.nil?
+    %ul
+    -run.errors.full_messages.each do |error|
+      %li= error
 
-= form_for run do |f|
-  =f.label :ran_on
-  %br
-  =f.date_select :ran_on
-  %br
-  =f.label :distance
-  =f.number_field :distance
-  %br
-  =f.submit
+  = form_for run do |f|
+    #date_picker_field
+      =f.label :ran_on
+      %br
+      =f.date_select :ran_on
+    #distance_field
+      =f.label :distance
+      =f.number_field :distance
+    #submit_field
+      =f.submit

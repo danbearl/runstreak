@@ -229,7 +229,7 @@ PLATFORMS
 
 DEPENDENCIES
   authem
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.5)
   capybara
   coffee-rails (~> 4.1.0)
   cucumber-rails

@@ -13,10 +13,10 @@ gem 'turbolinks'
 gem 'therubyracer'
 gem 'faker'
 gem 'newrelic_rpm'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0'
-  gem 'bootstrap-sass'
   gem 'coffee-rails', '~> 4.1.0'
   gem 'uglifier', '>= 1.0.3'
 end
