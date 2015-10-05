@@ -1,9 +1,10 @@
-%h1 Log In
-=form_tag sessions_path, method: :post do
-  =label_tag :email
-  =text_field_tag :email
-  %br
-  =label_tag :password
-  =password_field_tag :password
-  %br
-  =submit_tag "Log In"
+.col-md-3.col-xs-3
+  %h2 Log In
+  =form_tag sessions_path, method: :post do
+    .form-group
+      =label_tag :email
+      =text_field_tag :email, nil, class: 'form-control'
+    .form-group
+      =label_tag :password
+      =password_field_tag :password, nil, class: 'form-control'
+    =submit_tag "Log In", class: 'btn btn-default'

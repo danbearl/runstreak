@@ -2,9 +2,12 @@
   %h1 Run Streak
   -unless current_user
     =link_to "Sign up", new_user_path
+    |
     =link_to "Sign in", new_session_path
   -else
     =link_to "Add a new run", new_user_run_path(current_user.id)
+    |
+    =link_to "Log Out", log_out_path
     %h2 Current Streak
     %p
       Days:

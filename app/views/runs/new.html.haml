@@ -1,5 +1,5 @@
 .col-md-3.col-xs-3
-  %h1 Log A New Run
+  %h2 Log A New Run
 
   -if !run.errors.nil?
     %ul
@@ -7,12 +7,12 @@
       %li= error
 
   = form_for run do |f|
-    #date_picker_field
+    .form-group
       =f.label :ran_on
       %br
-      =f.date_select :ran_on
-    #distance_field
+      =f.date_select :ran_on, class: 'form-control'
+    .form-group
       =f.label :distance
-      =f.number_field :distance
-    #submit_field
-      =f.submit
+      =f.number_field :distance, class: 'form-control'
+
+    =f.submit "Log It", class: 'btn btn-default'
