@@ -17,7 +17,7 @@
       =current_user.current_streak_distance
     %p
       Average Miles Per Day:
-      =current_user.current_streak_average
+      ="%6.2f" % [current_user.current_streak_average]
     %p
       Longest Streak:
       =current_user.longest_streak
